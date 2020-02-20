@@ -1,6 +1,6 @@
 <?php
-// include('dbconnect.php');
+include('wrapper.php');
 include('api.php');
 $api = new api();
-// $query = new query();
+$jsonwrapper = new jsonwrapper();
 ?>

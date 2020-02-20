@@ -1,32 +1,37 @@
 <?php
-include 'config/config.php';
+include '../config/config.php';
 $data = $api->getMovies();
 
-$arr = array('ASC','DESC');
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+	$arr = array('ASC','DESC');
+	if(isset($_GET['release_date'])){
 
-if(isset($_GET['release_date'])){
-	if(in_array($_GET['release_date'], $arr)){
-		switch ($_GET['release_date']) {
-			case 'ASC':
-				$response = sortASC($data);
-				break;
-			case 'DESC':
-				$response = sortDESC($data);
-				break;
-			default:
-				$response = $data;
-				break;
+		if(in_array($_GET['release_date'], $arr)){
+
+			switch ($_GET['release_date']) {
+				case 'ASC':
+					$response = sortASC($data);
+					break;
+				case 'DESC':
+					$response = sortDESC($data);
+
+					break;
+				default:
+					$response = $data;
+					break;
+			}
+			echo  $jsonwrapper->success(200,$response);
+		}else{
+			echo  $jsonwrapper->error(406,'Option Not Allowed');
 		}
 	}else{
-		$response = {
-			'status': 422,
-			'Unprocessible Identity: Please check your parameter'
-		}
+		echo  $jsonwrapper->success(200,$data);
+	}
 }else{
-	$response = $data;
+	echo $jsonwrapper->error(405,'Bad Method Request');
 }
 
-// if($_GET['release_date'])
+
 
 
 
@@ -44,9 +49,5 @@ function sortDESC($array){
 	return $array;
 }
 
-
-// echo "<pre>";
-// echo json_encode($response);
-// echo "Hello";
 
 ?>
