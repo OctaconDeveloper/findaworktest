@@ -30,9 +30,9 @@
 	Live Demo
 </h1>
 <pre class="pre-scrollable">
-	<a href="https://documenter.getpostman.com/view/9926630/SzKTweJT?version=latest#b2283044-5933-4e53-87d7-c39b96853051" target="_blank">
+	<!-- <a href="https://documenter.getpostman.com/view/9926630/SzKTweJT?version=latest#b2283044-5933-4e53-87d7-c39b96853051" target="_blank">
 		https://documenter.getpostman.com/view/9926630/SzKTweJT?version=latest#b2283044-5933-4e53-87d7-c39b96853051
-	</a>
+	</a> -->
 </pre>
 </body>
 </html>

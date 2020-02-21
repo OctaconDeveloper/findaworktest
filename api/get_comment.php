@@ -5,7 +5,7 @@ include '../config/config.php';
 		if(isset($_REQUEST['movie_id'])){
 			$movie_id=$_REQUEST['movie_id'];
 			$data = $api->getMovieComments($movie_id);
-			echo  $jsonwrapper->success(201,$data);
+			echo  $jsonwrapper->success(200,$data);
 		}else{
 			echo $jsonwrapper->error(422,'Unprocessible Identity: Missing Parameter');
 		}

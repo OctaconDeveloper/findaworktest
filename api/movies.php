@@ -1,8 +1,8 @@
 <?php
 include '../config/config.php';
 $data = $api->getMovies();
-
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+ 
+if($_SERVER['REQUEST_METHOD'] == 'GET'){
 	$arr = array('ASC','DESC');
 	if(isset($_GET['release_date'])){
 
