@@ -1,24 +1,16 @@
-# valuedseed-frontend
+# FindaWork Test
 
-## Project setup
+## Documentation
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+  https://documenter.getpostman.com/view/9926630/SzKTweJT?version=latest#b2283044-5933-4e53-87d7-c39b96853051
 ```
 
-### Compiles and minifies for production
+### GitHub Repo
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+  https://github.com/OctaconDeveloper/findaworktest
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Live Demo
+```
+N/A
+```
